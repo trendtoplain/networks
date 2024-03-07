@@ -64,6 +64,27 @@ export const networks: Networks = {
     protocolMultisig: undefined,
   } as Network,
   // TEST NETWORKS
+
+  scrollSepoliaTestnet: {
+    name: 'Scroll Sepolia Testnet',
+    type: NetworkType.testnet,
+    key: 'scrollChainTestnet',
+    shortKey: 'scrollTestnet',
+    color: '#FFFFFF',
+    chain: 534351,
+    rpc: process.env.SCROLL_CHAIN_TESTNET_RPC_URL || 'https://sepolia-rpc.scroll.io',
+    holographId: 4000000078,
+    tokenName: ' Scroll ETH',
+    tokenSymbol: 'ETH',
+    explorer: 'https://sepolia-blockscout.scroll.io/',
+    lzEndpoint: '0x0000000000000000000000000000000000000000'.toLowerCase(),
+    lzId: 0,
+    ccipEndpoint: '0x0000000000000000000000000000000000000000'.toLowerCase(),
+    ccipId: 0,
+    active: false,
+    protocolMultisig: undefined,
+  } as Network,
+  
     zoraTestnetSepolia: {
     name: 'Zora Sepolia Testnet',
     type: NetworkType.testnet,
@@ -1536,6 +1557,8 @@ export const networks: Networks = {
     protocolMultisig: undefined,
     deprecated: true,
   } as Network,
+
+  
   // LIVE NETWORKS
   ethereum: {
     name: 'Ethereum',
@@ -2980,5 +3003,25 @@ export const networks: Networks = {
     ccipId: 0,
     active: true,
     protocolMultisig: '0x45E6ca6bd2F10c44B00C957A65dAb568EE7d2378'.toLowerCase(),
+  } as Network,
+
+    scroll: {
+    name: 'Scroll',
+    type: NetworkType.mainnet,
+    key: 'scroll',
+    shortKey: 'scroll',
+    color: '#FFFFFF',
+    chain: 534352,
+    rpc: process.env.SCROLL_RPC_URL || 'https://rpc.scroll.io',
+    holographId: 77,
+    tokenName: 'Scroll ETH',
+    tokenSymbol: 'ETH',
+    explorer: 'https://scrollscan.com/',
+    lzEndpoint: '0x0000000000000000000000000000000000000000'.toLowerCase(),
+    lzId: 0,
+    ccipEndpoint: '0x0000000000000000000000000000000000000000'.toLowerCase(),
+    ccipId: 0,
+    active: false,
+    protocolMultisig: undefined,
   } as Network,
 };
